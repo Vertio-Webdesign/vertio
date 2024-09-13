@@ -1,12 +1,16 @@
-import { defineField } from "sanity";
+import { defineField, defineType } from "sanity";
 
 
 
-export default defineField({
+export default defineType({
     type: "document",
     name: "navigation",
     title: "Navigation",
     fields: [
-        
+        defineField({
+            title: "menu",
+            name: "menu",
+            type: "string",
+        })
     ]
 })

@@ -3,6 +3,10 @@ import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
 
+import {deskStructure} from "./component/deskStructure"
+
+import {muxInput} from 'sanity-plugin-mux-input'
+
 import { seoMetaFields } from "sanity-plugin-seo";
 
 export default defineConfig({
@@ -12,7 +16,7 @@ export default defineConfig({
   projectId: '9rlevipl',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool(), seoMetaFields()],
+  plugins: [structureTool({structure: deskStructure}), visionTool(), seoMetaFields(), muxInput()],
 
   schema: {
     types: schemaTypes,

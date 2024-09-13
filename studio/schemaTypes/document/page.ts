@@ -42,6 +42,7 @@ export default defineType({
             type: "array",
             of: [
                 defineArrayMember({ type: "hero"}),
+                defineArrayMember({ type: "videoBlogPost"}),
             ],
             group: "page",
         }),

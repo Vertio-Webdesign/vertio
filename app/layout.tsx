@@ -9,7 +9,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-const SpaceGrotesk = localFont({src: "./fonts/SpaceGrotesk.woff", weight: "700"})
+const SpaceGrotesk = localFont({src: "./fonts/SpaceGrotesk.woff",})
 
 export const metadata: Metadata = {
   title: "Create Next App",

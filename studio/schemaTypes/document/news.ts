@@ -51,5 +51,10 @@ export default defineType({
                 layout: "tags",
             }
         }),
+        defineField({
+            title: 'Release date',
+            name: 'releaseDate',
+            type: 'date'
+        }),
     ]
 })

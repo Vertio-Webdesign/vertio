@@ -1,9 +1,13 @@
+import { RiPagesLine } from "react-icons/ri";
+
+
 export const deskStructure = (S: any, context: any) => 
     S.list()
     	.title("Vertio")
         .items([
             S.listItem()
                 .title("Sider")
+                .icon(RiPagesLine)
                 .child(
                     S.list()
                         .title("Sider")

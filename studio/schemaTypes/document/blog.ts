@@ -1,11 +1,12 @@
 import { defineArrayMember, defineField, defineType } from "sanity";
 import { MdEditDocument } from "react-icons/md";
+import { RiArticleLine } from "react-icons/ri";
 
 export default defineType({
-    name: "page",
-    title: "Pages",
+    name: "blog",
+    title: "Blogs",
     type: "document",
-    icon: MdEditDocument,
+    icon: RiArticleLine,
     groups: [
         {
             title: "Page",

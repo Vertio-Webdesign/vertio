@@ -28,12 +28,9 @@ export default defineType({
             ]
         }),
         defineField({
-            name: "heroImg",
-            title: "Image",
-            type: "image",
-            options: {
-                hotspot: true,
-            }
+            type: "imageBlock",
+            name: "imageBlock",
+            title: "Hero Image",
         })
     ]
 })

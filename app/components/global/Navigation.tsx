@@ -57,7 +57,7 @@ export const Navigation = ({ menu }: Props) => {
                 </div>
                 </div>
             </div>
-            <div className={`w-full mx-auto border-b bg-blue-300 py-10 duration-300 transition-all transform ${isSearchOpen ? '' : 'hidden'}`}>
+            <div className={`w-full mx-auto border-b bg-blue-100 py-10 duration-300 transition-all transform ${isSearchOpen ? '' : 'hidden'}`}>
                 <div className="container flex items-center justify-center mx-auto">
                     <form method="get">
                         <div className="w-full max-w-[500px] items-center rounded-full h-12 border border-blue-700 flex bg-white overflow-hidden">
@@ -70,7 +70,7 @@ export const Navigation = ({ menu }: Props) => {
                     </form>
                 </div>
             </div>
-            <div id="meny-container" className={`w-full mx-auto border-b bg-blue-300  py-10 duration-300 transition-all transform ${isMenuOpen ? '' : 'hidden'}`}>
+            <div id="meny-container" className={`w-full mx-auto border-b bg-blue-100  py-10 duration-300 transition-all transform ${isMenuOpen ? '' : 'hidden'}`}>
                 <ul className="container grid grid-cols-1 px-4 lg:grid-cols-3 items-start md:px-0 text-base justify-between w-full mx-auto">
                     <li className='flex justify-start items-start order-3 lg:order-1 flex-col space-y-4'>
                             <a id="meny-button" href="/" className="flex justify-center items-center text-black font-bold">

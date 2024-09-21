@@ -1,6 +1,16 @@
 import { groq } from "next-sanity"
 
 
+export const homeSectionsQuery = groq`
+  *[_type == "home"] {
+    ...,
+    sections[] {
+      ...,
+    },
+  }
+`
+
+
 export const pagesBySlugQuery = groq`
   *[_type == "blog" && slug.current == $slug][0] {
     ...,

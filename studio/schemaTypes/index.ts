@@ -7,6 +7,7 @@ import news from "./document/news";
 import hero from "./objects/hero";
 import cta from "./objects/shared/cta";
 import imageBlock from "./objects/shared/imageBlock";
+import textBlock from "./objects/textBlock";
 import video from "./objects/video";
 
-export const schemaTypes = [navigation, hero, blog, video, home, category, news, imageBlock, cta, author]
+export const schemaTypes = [navigation, hero, blog, video, home, category, news, imageBlock, cta, author, textBlock]

@@ -23,13 +23,16 @@ export default async function PageSlugRoute(props: PageProps) {
   }
 
   return (
-    <div>
+    <>
       {data?.sections && data?.sections.map((section: any) => {
           switch (section._type) {
             case "hero":
                 return <pre>{JSON.stringify(section)}</pre>
           }
         })}
-    </div>
+        <pre>
+            {JSON.stringify(data, undefined, 2)}
+        </pre>
+    </>
   );
 }

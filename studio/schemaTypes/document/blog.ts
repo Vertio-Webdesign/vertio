@@ -44,6 +44,7 @@ export default defineType({
             of: [
                 defineArrayMember({ type: "hero"}),
                 defineArrayMember({ type: "videoBlogPost"}),
+                defineArrayMember({ type: "textBlock"}),
             ],
             group: "page",
         }),

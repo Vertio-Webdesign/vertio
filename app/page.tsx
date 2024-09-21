@@ -1,10 +1,18 @@
 import Image from "next/image";
-import { Hero } from "./components/Hero";
+import { client } from "./utils/sanity/client";
+import { homeSectionsQuery } from "./utils/sanity/querys";
 
-export default function Home() {
-  return (
-    <>
-      <Hero />
-    </>
-  );
+
+
+export default async function getHomePageRoute() {
+  const data = await client.fetch(homeSectionsQuery, {
+  });
+
+  return(
+    <div>
+      <pre>
+        {JSON.stringify(data, undefined, 2)}
+      </pre>
+    </div>
+  )
 }

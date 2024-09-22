@@ -36,14 +36,28 @@ export const pagePathsQuery = groq`
 `
 
 
+
+export const articleBySlugQuery = groq`
+  *[_type == "news" && slug.current == $slug][0] {
+    imageBlock,
+    text,
+    relaseDate,
+    "slug": slug.current,
+  }
+`
+
 export const getAllBlogsQuery = groq`
   *[_type == "news"] {
- ...,
   parents[]-> {
     title,
-  }
+  },
+  description,
+  heading,
+  imageBlock,
 }
 `
+
+
 
 export const getHomePageQuery = groq`
 *[_type == 'home']

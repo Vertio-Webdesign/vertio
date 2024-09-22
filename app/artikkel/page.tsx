@@ -34,7 +34,7 @@ export default async function blogPageRoute(params: PageProps) {
                                     width={300}
                                     height={300}
                                     />
-                                    <div className="flex flex-col gap-3 items-start justify-center mx-auto ">
+                                    <div className="flex flex-col gap-3 items-start justify-center mx-auto bg-inherit ">
                                         <div className="flex-row inline-flex flex-grow gap-1 w-full">
                                             {i.parents?.map((t: any) => (
                                                 <div key={t} className="bg-blue-600 text-white font-normal text-sm items-center justify-center flex px-6 py-2 uppercase w-fit rounded-full">
@@ -42,7 +42,7 @@ export default async function blogPageRoute(params: PageProps) {
                                                 </div>
                                             ))}
                                         </div>
-                                        <h2 className="text-3xl line-clamp-2  leading-normal !font-bold !text-black group-hover:underline ">
+                                        <h2 className="text-3xl line-clamp-2  leading-normal !font-bold !text-black group-hover:underline underline-offset-4 ">
                                             {i.heading}
                                         </h2>
                                         <p className="text-base md:text-lg font-normal text-black overflow-hidden">

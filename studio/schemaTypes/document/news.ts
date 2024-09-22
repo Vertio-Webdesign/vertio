@@ -9,6 +9,20 @@ export default defineType({
     icon: BiNews,
     fields: [
         defineField({
+            type: "string",
+            name: "heading",
+            title: "Heading",
+        }),
+        defineField({
+            title: "Slug",
+            name: "slug",
+            type: "slug",
+            options: {
+                maxLength: 46,
+                source: "heading",
+            }
+        }),
+        defineField({
             name: "imageBlock",
             title: "Bilde",
             type: "imageBlock"
@@ -21,11 +35,6 @@ export default defineType({
             options: {
                 layout: "tags",
             },
-        }),
-        defineField({
-            type: "string",
-            name: "heading",
-            title: "Heading",
         }),
         defineField({
             type: "string",

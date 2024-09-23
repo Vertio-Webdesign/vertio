@@ -37,8 +37,8 @@ export const Navigation = ({ menu }: Props) => {
 
     return(
         <header className="w-full flex-col mx-auto bg-blue-700">
-            <div className="container flex flex-row items-center py-5 justify-between px-8 lg:px-0 mx-auto">
-                <Link href="/" className="flex justify-start items-start text-white font-bold text-base">
+            <div className="container flex flex-row items-center py-8 justify-between px-8 lg:px-0 mx-auto">
+                <Link href="/" className="flex justify-start items-start text-white text-base font-medium">
                     Vertio
                 </Link>
                 <div className="flex flex-row space-x-2">
@@ -57,7 +57,7 @@ export const Navigation = ({ menu }: Props) => {
                 </div>
                 </div>
             </div>
-            <div className={`w-full mx-auto border-b bg-blue-100 py-10 duration-300 transition-all transform ${isSearchOpen ? '' : 'hidden'}`}>
+            <div className={`w-full mx-auto border-b shadow-sm absolute bg-blue-100 py-10 duration-300 transition-all transform ${isSearchOpen ? '' : 'hidden'}`}>
                 <div className="container flex items-center justify-center mx-auto">
                     <form method="get">
                         <div className="w-full max-w-[500px] items-center rounded-full h-12 border border-blue-700 flex bg-white overflow-hidden">
@@ -69,33 +69,6 @@ export const Navigation = ({ menu }: Props) => {
                         </div>
                     </form>
                 </div>
-            </div>
-            <div id="meny-container" className={`w-full mx-auto border-b bg-blue-100  py-10 duration-300 transition-all transform ${isMenuOpen ? '' : 'hidden'}`}>
-                <ul className="container grid grid-cols-1 px-4 lg:grid-cols-3 items-start md:px-0 text-base justify-between w-full mx-auto">
-                    <li className='flex justify-start items-start order-3 lg:order-1 flex-col space-y-4'>
-                            <a id="meny-button" href="/" className="flex justify-center items-center text-black font-bold">
-                                    <span className='flex text-lg items-center justify-center'>Hjem &rarr;</span>
-                                </a>
-                    </li>
-                    <li className='flex justify-start items-start flex-col space-y-4 order-3 lg:order-2'>
-                        <a id="meny-button" href="/" className="flex justify-center items-center text-black">
-                            <span className="flex text-lg items-center justify-center">Blog &rarr;</span>
-                        </a>
-                    </li>   
-                    <li className='order-1 lg:order-3 flex items-start justify-start pb-4 flex-col w-full space-y-4'>
-                            <a href="/" className="flex border border-blue-700 bg-blue-700 text-white w-full md:max-w-fit min-h-fit h-0 px-8 md:px-12 py-7 justify-between items-center rounded-full hover:bg-white hover:text-black duration-300 ">
-                                <span className='flex justify-between items-center w-full text-base'>
-                                    <span className='flex items-center justify-center'>Ta kontakt</span>
-                                    &rarr;
-                                </span>
-                            </a>
-                        <a href="/" className="flex border border-blue-700 bg-blue-700 text-white w-full md:max-w-fit min-h-fit h-0 px-8 md:px-12 py-7 justify-between items-center rounded-full hover:bg-white hover:text-black duration-300 ">
-                            <span className='flex justify-between items-center w-full text-base'>
-                                <span className="flex text-sm md:text-base items-center space-x-1">Login<IoMdLogIn className="ml-2"/></span>
-                            </span>
-                        </a>
-                    </li>   
-                </ul>
             </div>
         </header>
     )

@@ -9,15 +9,12 @@ import { getAllBlogsQuery } from "../utils/sanity/querys";
 import { urlFor } from "../utils/sanity/image";
 
 
-interface PageProps {
-    description: string;
-}
 
-export default async function blogPageRoute(params: PageProps) {
+export default async function blogPageRoute() {
     const data = await client.fetch(getAllBlogsQuery);
 
     return(
-        <div className="w-full mx-auto bg-inherit py-8 md:py-10 px-8 lg:px-0">
+        <div className="w-full mx-auto bg-inherit py-8 md:py-14 px-8 lg:px-0">
             <div className="container flex flex-col justify-center items-center mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-between gap-6">
                     {data?.map((i: any, x: any) => {
@@ -31,6 +28,7 @@ export default async function blogPageRoute(params: PageProps) {
                                         ? urlFor(i.imageBlock.image).url()
                                         : ""
                                     }
+                                    loading="lazy"
                                     width={300}
                                     height={300}
                                     />
